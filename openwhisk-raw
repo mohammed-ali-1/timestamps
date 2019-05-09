@@ -1,0 +1,2408 @@
+ok: got activation 3e9ff57d752e43469ff57d752ec34692
+{
+    "namespace": "guest",
+    "name": "kafkaOutAction",
+    "version": "0.0.5",
+    "subject": "guest",
+    "activationId": "3e9ff57d752e43469ff57d752ec34692",
+    "start": 1557407591183,
+    "end": 1557407591235,
+    "duration": 52,
+    "statusCode": 0,
+    "response": {
+        "status": "success",
+        "statusCode": 0,
+        "success": true,
+        "result": {
+            "incoming": {
+                "messages": [
+                    {
+                        "key": "{\"schema\":{\"type\":\"struct\",\"fields\":[{\"type\":\"int32\",\"optional\":false,\"field\":\"id\"}],\"optional\":false,\"name\":\"dbserver1.inventory.addresses.Key\"},\"payload\":{\"id\":300}}",
+                        "offset": 87,
+                        "partition": 0,
+                        "topic": "dbserver1.inventory.addresses",
+                        "value": {
+                            "payload": {
+                                "after": {
+                                    "city": "Winterthur",
+                                    "customer_id": 1001,
+                                    "id": 300,
+                                    "state": "Zurich",
+                                    "street": "Gertnerstrasse 4",
+                                    "type": "SHIPPING",
+                                    "zip": "8400"
+                                },
+                                "before": null,
+                                "op": "c",
+                                "source": {
+                                    "connector": "mysql",
+                                    "db": "inventory",
+                                    "file": "mysql-bin.000003",
+                                    "gtid": null,
+                                    "name": "dbserver1",
+                                    "pos": 28192,
+                                    "query": null,
+                                    "row": 0,
+                                    "server_id": 223344,
+                                    "snapshot": false,
+                                    "table": "addresses",
+                                    "thread": 102,
+                                    "ts_sec": 1557407590,
+                                    "version": "0.9.4.Final"
+                                },
+                                "ts_ms": 1557407590706
+                            },
+                            "schema": {
+                                "fields": [
+                                    {
+                                        "field": "before",
+                                        "fields": [
+                                            {
+                                                "field": "id",
+                                                "optional": false,
+                                                "type": "int32"
+                                            },
+                                            {
+                                                "field": "customer_id",
+                                                "optional": false,
+                                                "type": "int32"
+                                            },
+                                            {
+                                                "field": "street",
+                                                "optional": false,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "city",
+                                                "optional": false,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "state",
+                                                "optional": false,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "zip",
+                                                "optional": false,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "type",
+                                                "name": "io.debezium.data.Enum",
+                                                "optional": false,
+                                                "parameters": {
+                                                    "allowed": "SHIPPING,BILLING,LIVING"
+                                                },
+                                                "type": "string",
+                                                "version": 1
+                                            }
+                                        ],
+                                        "name": "dbserver1.inventory.addresses.Value",
+                                        "optional": true,
+                                        "type": "struct"
+                                    },
+                                    {
+                                        "field": "after",
+                                        "fields": [
+                                            {
+                                                "field": "id",
+                                                "optional": false,
+                                                "type": "int32"
+                                            },
+                                            {
+                                                "field": "customer_id",
+                                                "optional": false,
+                                                "type": "int32"
+                                            },
+                                            {
+                                                "field": "street",
+                                                "optional": false,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "city",
+                                                "optional": false,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "state",
+                                                "optional": false,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "zip",
+                                                "optional": false,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "type",
+                                                "name": "io.debezium.data.Enum",
+                                                "optional": false,
+                                                "parameters": {
+                                                    "allowed": "SHIPPING,BILLING,LIVING"
+                                                },
+                                                "type": "string",
+                                                "version": 1
+                                            }
+                                        ],
+                                        "name": "dbserver1.inventory.addresses.Value",
+                                        "optional": true,
+                                        "type": "struct"
+                                    },
+                                    {
+                                        "field": "source",
+                                        "fields": [
+                                            {
+                                                "field": "version",
+                                                "optional": true,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "connector",
+                                                "optional": true,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "name",
+                                                "optional": false,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "server_id",
+                                                "optional": false,
+                                                "type": "int64"
+                                            },
+                                            {
+                                                "field": "ts_sec",
+                                                "optional": false,
+                                                "type": "int64"
+                                            },
+                                            {
+                                                "field": "gtid",
+                                                "optional": true,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "file",
+                                                "optional": false,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "pos",
+                                                "optional": false,
+                                                "type": "int64"
+                                            },
+                                            {
+                                                "field": "row",
+                                                "optional": false,
+                                                "type": "int32"
+                                            },
+                                            {
+                                                "default": false,
+                                                "field": "snapshot",
+                                                "optional": true,
+                                                "type": "boolean"
+                                            },
+                                            {
+                                                "field": "thread",
+                                                "optional": true,
+                                                "type": "int64"
+                                            },
+                                            {
+                                                "field": "db",
+                                                "optional": true,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "table",
+                                                "optional": true,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "query",
+                                                "optional": true,
+                                                "type": "string"
+                                            }
+                                        ],
+                                        "name": "io.debezium.connector.mysql.Source",
+                                        "optional": false,
+                                        "type": "struct"
+                                    },
+                                    {
+                                        "field": "op",
+                                        "optional": false,
+                                        "type": "string"
+                                    },
+                                    {
+                                        "field": "ts_ms",
+                                        "optional": true,
+                                        "type": "int64"
+                                    }
+                                ],
+                                "name": "dbserver1.inventory.addresses.Envelope",
+                                "optional": false,
+                                "type": "struct"
+                            }
+                        }
+                    },
+                    {
+                        "key": "{\"schema\":{\"type\":\"struct\",\"fields\":[{\"type\":\"int32\",\"optional\":false,\"field\":\"id\"}],\"optional\":false,\"name\":\"dbserver1.inventory.addresses.Key\"},\"payload\":{\"id\":301}}",
+                        "offset": 88,
+                        "partition": 0,
+                        "topic": "dbserver1.inventory.addresses",
+                        "value": {
+                            "payload": {
+                                "after": {
+                                    "city": "Winterthur",
+                                    "customer_id": 1001,
+                                    "id": 301,
+                                    "state": "Zurich",
+                                    "street": "Gertnerstrasse 4",
+                                    "type": "SHIPPING",
+                                    "zip": "8400"
+                                },
+                                "before": null,
+                                "op": "c",
+                                "source": {
+                                    "connector": "mysql",
+                                    "db": "inventory",
+                                    "file": "mysql-bin.000003",
+                                    "gtid": null,
+                                    "name": "dbserver1",
+                                    "pos": 28523,
+                                    "query": null,
+                                    "row": 0,
+                                    "server_id": 223344,
+                                    "snapshot": false,
+                                    "table": "addresses",
+                                    "thread": 102,
+                                    "ts_sec": 1557407590,
+                                    "version": "0.9.4.Final"
+                                },
+                                "ts_ms": 1557407590729
+                            },
+                            "schema": {
+                                "fields": [
+                                    {
+                                        "field": "before",
+                                        "fields": [
+                                            {
+                                                "field": "id",
+                                                "optional": false,
+                                                "type": "int32"
+                                            },
+                                            {
+                                                "field": "customer_id",
+                                                "optional": false,
+                                                "type": "int32"
+                                            },
+                                            {
+                                                "field": "street",
+                                                "optional": false,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "city",
+                                                "optional": false,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "state",
+                                                "optional": false,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "zip",
+                                                "optional": false,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "type",
+                                                "name": "io.debezium.data.Enum",
+                                                "optional": false,
+                                                "parameters": {
+                                                    "allowed": "SHIPPING,BILLING,LIVING"
+                                                },
+                                                "type": "string",
+                                                "version": 1
+                                            }
+                                        ],
+                                        "name": "dbserver1.inventory.addresses.Value",
+                                        "optional": true,
+                                        "type": "struct"
+                                    },
+                                    {
+                                        "field": "after",
+                                        "fields": [
+                                            {
+                                                "field": "id",
+                                                "optional": false,
+                                                "type": "int32"
+                                            },
+                                            {
+                                                "field": "customer_id",
+                                                "optional": false,
+                                                "type": "int32"
+                                            },
+                                            {
+                                                "field": "street",
+                                                "optional": false,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "city",
+                                                "optional": false,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "state",
+                                                "optional": false,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "zip",
+                                                "optional": false,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "type",
+                                                "name": "io.debezium.data.Enum",
+                                                "optional": false,
+                                                "parameters": {
+                                                    "allowed": "SHIPPING,BILLING,LIVING"
+                                                },
+                                                "type": "string",
+                                                "version": 1
+                                            }
+                                        ],
+                                        "name": "dbserver1.inventory.addresses.Value",
+                                        "optional": true,
+                                        "type": "struct"
+                                    },
+                                    {
+                                        "field": "source",
+                                        "fields": [
+                                            {
+                                                "field": "version",
+                                                "optional": true,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "connector",
+                                                "optional": true,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "name",
+                                                "optional": false,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "server_id",
+                                                "optional": false,
+                                                "type": "int64"
+                                            },
+                                            {
+                                                "field": "ts_sec",
+                                                "optional": false,
+                                                "type": "int64"
+                                            },
+                                            {
+                                                "field": "gtid",
+                                                "optional": true,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "file",
+                                                "optional": false,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "pos",
+                                                "optional": false,
+                                                "type": "int64"
+                                            },
+                                            {
+                                                "field": "row",
+                                                "optional": false,
+                                                "type": "int32"
+                                            },
+                                            {
+                                                "default": false,
+                                                "field": "snapshot",
+                                                "optional": true,
+                                                "type": "boolean"
+                                            },
+                                            {
+                                                "field": "thread",
+                                                "optional": true,
+                                                "type": "int64"
+                                            },
+                                            {
+                                                "field": "db",
+                                                "optional": true,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "table",
+                                                "optional": true,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "query",
+                                                "optional": true,
+                                                "type": "string"
+                                            }
+                                        ],
+                                        "name": "io.debezium.connector.mysql.Source",
+                                        "optional": false,
+                                        "type": "struct"
+                                    },
+                                    {
+                                        "field": "op",
+                                        "optional": false,
+                                        "type": "string"
+                                    },
+                                    {
+                                        "field": "ts_ms",
+                                        "optional": true,
+                                        "type": "int64"
+                                    }
+                                ],
+                                "name": "dbserver1.inventory.addresses.Envelope",
+                                "optional": false,
+                                "type": "struct"
+                            }
+                        }
+                    },
+                    {
+                        "key": "{\"schema\":{\"type\":\"struct\",\"fields\":[{\"type\":\"int32\",\"optional\":false,\"field\":\"id\"}],\"optional\":false,\"name\":\"dbserver1.inventory.addresses.Key\"},\"payload\":{\"id\":302}}",
+                        "offset": 89,
+                        "partition": 0,
+                        "topic": "dbserver1.inventory.addresses",
+                        "value": {
+                            "payload": {
+                                "after": {
+                                    "city": "Winterthur",
+                                    "customer_id": 1001,
+                                    "id": 302,
+                                    "state": "Zurich",
+                                    "street": "Gertnerstrasse 4",
+                                    "type": "SHIPPING",
+                                    "zip": "8400"
+                                },
+                                "before": null,
+                                "op": "c",
+                                "source": {
+                                    "connector": "mysql",
+                                    "db": "inventory",
+                                    "file": "mysql-bin.000003",
+                                    "gtid": null,
+                                    "name": "dbserver1",
+                                    "pos": 28854,
+                                    "query": null,
+                                    "row": 0,
+                                    "server_id": 223344,
+                                    "snapshot": false,
+                                    "table": "addresses",
+                                    "thread": 102,
+                                    "ts_sec": 1557407590,
+                                    "version": "0.9.4.Final"
+                                },
+                                "ts_ms": 1557407590752
+                            },
+                            "schema": {
+                                "fields": [
+                                    {
+                                        "field": "before",
+                                        "fields": [
+                                            {
+                                                "field": "id",
+                                                "optional": false,
+                                                "type": "int32"
+                                            },
+                                            {
+                                                "field": "customer_id",
+                                                "optional": false,
+                                                "type": "int32"
+                                            },
+                                            {
+                                                "field": "street",
+                                                "optional": false,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "city",
+                                                "optional": false,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "state",
+                                                "optional": false,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "zip",
+                                                "optional": false,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "type",
+                                                "name": "io.debezium.data.Enum",
+                                                "optional": false,
+                                                "parameters": {
+                                                    "allowed": "SHIPPING,BILLING,LIVING"
+                                                },
+                                                "type": "string",
+                                                "version": 1
+                                            }
+                                        ],
+                                        "name": "dbserver1.inventory.addresses.Value",
+                                        "optional": true,
+                                        "type": "struct"
+                                    },
+                                    {
+                                        "field": "after",
+                                        "fields": [
+                                            {
+                                                "field": "id",
+                                                "optional": false,
+                                                "type": "int32"
+                                            },
+                                            {
+                                                "field": "customer_id",
+                                                "optional": false,
+                                                "type": "int32"
+                                            },
+                                            {
+                                                "field": "street",
+                                                "optional": false,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "city",
+                                                "optional": false,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "state",
+                                                "optional": false,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "zip",
+                                                "optional": false,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "type",
+                                                "name": "io.debezium.data.Enum",
+                                                "optional": false,
+                                                "parameters": {
+                                                    "allowed": "SHIPPING,BILLING,LIVING"
+                                                },
+                                                "type": "string",
+                                                "version": 1
+                                            }
+                                        ],
+                                        "name": "dbserver1.inventory.addresses.Value",
+                                        "optional": true,
+                                        "type": "struct"
+                                    },
+                                    {
+                                        "field": "source",
+                                        "fields": [
+                                            {
+                                                "field": "version",
+                                                "optional": true,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "connector",
+                                                "optional": true,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "name",
+                                                "optional": false,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "server_id",
+                                                "optional": false,
+                                                "type": "int64"
+                                            },
+                                            {
+                                                "field": "ts_sec",
+                                                "optional": false,
+                                                "type": "int64"
+                                            },
+                                            {
+                                                "field": "gtid",
+                                                "optional": true,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "file",
+                                                "optional": false,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "pos",
+                                                "optional": false,
+                                                "type": "int64"
+                                            },
+                                            {
+                                                "field": "row",
+                                                "optional": false,
+                                                "type": "int32"
+                                            },
+                                            {
+                                                "default": false,
+                                                "field": "snapshot",
+                                                "optional": true,
+                                                "type": "boolean"
+                                            },
+                                            {
+                                                "field": "thread",
+                                                "optional": true,
+                                                "type": "int64"
+                                            },
+                                            {
+                                                "field": "db",
+                                                "optional": true,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "table",
+                                                "optional": true,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "query",
+                                                "optional": true,
+                                                "type": "string"
+                                            }
+                                        ],
+                                        "name": "io.debezium.connector.mysql.Source",
+                                        "optional": false,
+                                        "type": "struct"
+                                    },
+                                    {
+                                        "field": "op",
+                                        "optional": false,
+                                        "type": "string"
+                                    },
+                                    {
+                                        "field": "ts_ms",
+                                        "optional": true,
+                                        "type": "int64"
+                                    }
+                                ],
+                                "name": "dbserver1.inventory.addresses.Envelope",
+                                "optional": false,
+                                "type": "struct"
+                            }
+                        }
+                    },
+                    {
+                        "key": "{\"schema\":{\"type\":\"struct\",\"fields\":[{\"type\":\"int32\",\"optional\":false,\"field\":\"id\"}],\"optional\":false,\"name\":\"dbserver1.inventory.addresses.Key\"},\"payload\":{\"id\":303}}",
+                        "offset": 90,
+                        "partition": 0,
+                        "topic": "dbserver1.inventory.addresses",
+                        "value": {
+                            "payload": {
+                                "after": {
+                                    "city": "Winterthur",
+                                    "customer_id": 1001,
+                                    "id": 303,
+                                    "state": "Zurich",
+                                    "street": "Gertnerstrasse 4",
+                                    "type": "SHIPPING",
+                                    "zip": "8400"
+                                },
+                                "before": null,
+                                "op": "c",
+                                "source": {
+                                    "connector": "mysql",
+                                    "db": "inventory",
+                                    "file": "mysql-bin.000003",
+                                    "gtid": null,
+                                    "name": "dbserver1",
+                                    "pos": 29185,
+                                    "query": null,
+                                    "row": 0,
+                                    "server_id": 223344,
+                                    "snapshot": false,
+                                    "table": "addresses",
+                                    "thread": 102,
+                                    "ts_sec": 1557407590,
+                                    "version": "0.9.4.Final"
+                                },
+                                "ts_ms": 1557407590764
+                            },
+                            "schema": {
+                                "fields": [
+                                    {
+                                        "field": "before",
+                                        "fields": [
+                                            {
+                                                "field": "id",
+                                                "optional": false,
+                                                "type": "int32"
+                                            },
+                                            {
+                                                "field": "customer_id",
+                                                "optional": false,
+                                                "type": "int32"
+                                            },
+                                            {
+                                                "field": "street",
+                                                "optional": false,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "city",
+                                                "optional": false,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "state",
+                                                "optional": false,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "zip",
+                                                "optional": false,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "type",
+                                                "name": "io.debezium.data.Enum",
+                                                "optional": false,
+                                                "parameters": {
+                                                    "allowed": "SHIPPING,BILLING,LIVING"
+                                                },
+                                                "type": "string",
+                                                "version": 1
+                                            }
+                                        ],
+                                        "name": "dbserver1.inventory.addresses.Value",
+                                        "optional": true,
+                                        "type": "struct"
+                                    },
+                                    {
+                                        "field": "after",
+                                        "fields": [
+                                            {
+                                                "field": "id",
+                                                "optional": false,
+                                                "type": "int32"
+                                            },
+                                            {
+                                                "field": "customer_id",
+                                                "optional": false,
+                                                "type": "int32"
+                                            },
+                                            {
+                                                "field": "street",
+                                                "optional": false,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "city",
+                                                "optional": false,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "state",
+                                                "optional": false,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "zip",
+                                                "optional": false,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "type",
+                                                "name": "io.debezium.data.Enum",
+                                                "optional": false,
+                                                "parameters": {
+                                                    "allowed": "SHIPPING,BILLING,LIVING"
+                                                },
+                                                "type": "string",
+                                                "version": 1
+                                            }
+                                        ],
+                                        "name": "dbserver1.inventory.addresses.Value",
+                                        "optional": true,
+                                        "type": "struct"
+                                    },
+                                    {
+                                        "field": "source",
+                                        "fields": [
+                                            {
+                                                "field": "version",
+                                                "optional": true,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "connector",
+                                                "optional": true,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "name",
+                                                "optional": false,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "server_id",
+                                                "optional": false,
+                                                "type": "int64"
+                                            },
+                                            {
+                                                "field": "ts_sec",
+                                                "optional": false,
+                                                "type": "int64"
+                                            },
+                                            {
+                                                "field": "gtid",
+                                                "optional": true,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "file",
+                                                "optional": false,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "pos",
+                                                "optional": false,
+                                                "type": "int64"
+                                            },
+                                            {
+                                                "field": "row",
+                                                "optional": false,
+                                                "type": "int32"
+                                            },
+                                            {
+                                                "default": false,
+                                                "field": "snapshot",
+                                                "optional": true,
+                                                "type": "boolean"
+                                            },
+                                            {
+                                                "field": "thread",
+                                                "optional": true,
+                                                "type": "int64"
+                                            },
+                                            {
+                                                "field": "db",
+                                                "optional": true,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "table",
+                                                "optional": true,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "query",
+                                                "optional": true,
+                                                "type": "string"
+                                            }
+                                        ],
+                                        "name": "io.debezium.connector.mysql.Source",
+                                        "optional": false,
+                                        "type": "struct"
+                                    },
+                                    {
+                                        "field": "op",
+                                        "optional": false,
+                                        "type": "string"
+                                    },
+                                    {
+                                        "field": "ts_ms",
+                                        "optional": true,
+                                        "type": "int64"
+                                    }
+                                ],
+                                "name": "dbserver1.inventory.addresses.Envelope",
+                                "optional": false,
+                                "type": "struct"
+                            }
+                        }
+                    },
+                    {
+                        "key": "{\"schema\":{\"type\":\"struct\",\"fields\":[{\"type\":\"int32\",\"optional\":false,\"field\":\"id\"}],\"optional\":false,\"name\":\"dbserver1.inventory.addresses.Key\"},\"payload\":{\"id\":304}}",
+                        "offset": 91,
+                        "partition": 0,
+                        "topic": "dbserver1.inventory.addresses",
+                        "value": {
+                            "payload": {
+                                "after": {
+                                    "city": "Winterthur",
+                                    "customer_id": 1001,
+                                    "id": 304,
+                                    "state": "Zurich",
+                                    "street": "Gertnerstrasse 4",
+                                    "type": "SHIPPING",
+                                    "zip": "8400"
+                                },
+                                "before": null,
+                                "op": "c",
+                                "source": {
+                                    "connector": "mysql",
+                                    "db": "inventory",
+                                    "file": "mysql-bin.000003",
+                                    "gtid": null,
+                                    "name": "dbserver1",
+                                    "pos": 29516,
+                                    "query": null,
+                                    "row": 0,
+                                    "server_id": 223344,
+                                    "snapshot": false,
+                                    "table": "addresses",
+                                    "thread": 102,
+                                    "ts_sec": 1557407590,
+                                    "version": "0.9.4.Final"
+                                },
+                                "ts_ms": 1557407590783
+                            },
+                            "schema": {
+                                "fields": [
+                                    {
+                                        "field": "before",
+                                        "fields": [
+                                            {
+                                                "field": "id",
+                                                "optional": false,
+                                                "type": "int32"
+                                            },
+                                            {
+                                                "field": "customer_id",
+                                                "optional": false,
+                                                "type": "int32"
+                                            },
+                                            {
+                                                "field": "street",
+                                                "optional": false,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "city",
+                                                "optional": false,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "state",
+                                                "optional": false,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "zip",
+                                                "optional": false,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "type",
+                                                "name": "io.debezium.data.Enum",
+                                                "optional": false,
+                                                "parameters": {
+                                                    "allowed": "SHIPPING,BILLING,LIVING"
+                                                },
+                                                "type": "string",
+                                                "version": 1
+                                            }
+                                        ],
+                                        "name": "dbserver1.inventory.addresses.Value",
+                                        "optional": true,
+                                        "type": "struct"
+                                    },
+                                    {
+                                        "field": "after",
+                                        "fields": [
+                                            {
+                                                "field": "id",
+                                                "optional": false,
+                                                "type": "int32"
+                                            },
+                                            {
+                                                "field": "customer_id",
+                                                "optional": false,
+                                                "type": "int32"
+                                            },
+                                            {
+                                                "field": "street",
+                                                "optional": false,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "city",
+                                                "optional": false,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "state",
+                                                "optional": false,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "zip",
+                                                "optional": false,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "type",
+                                                "name": "io.debezium.data.Enum",
+                                                "optional": false,
+                                                "parameters": {
+                                                    "allowed": "SHIPPING,BILLING,LIVING"
+                                                },
+                                                "type": "string",
+                                                "version": 1
+                                            }
+                                        ],
+                                        "name": "dbserver1.inventory.addresses.Value",
+                                        "optional": true,
+                                        "type": "struct"
+                                    },
+                                    {
+                                        "field": "source",
+                                        "fields": [
+                                            {
+                                                "field": "version",
+                                                "optional": true,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "connector",
+                                                "optional": true,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "name",
+                                                "optional": false,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "server_id",
+                                                "optional": false,
+                                                "type": "int64"
+                                            },
+                                            {
+                                                "field": "ts_sec",
+                                                "optional": false,
+                                                "type": "int64"
+                                            },
+                                            {
+                                                "field": "gtid",
+                                                "optional": true,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "file",
+                                                "optional": false,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "pos",
+                                                "optional": false,
+                                                "type": "int64"
+                                            },
+                                            {
+                                                "field": "row",
+                                                "optional": false,
+                                                "type": "int32"
+                                            },
+                                            {
+                                                "default": false,
+                                                "field": "snapshot",
+                                                "optional": true,
+                                                "type": "boolean"
+                                            },
+                                            {
+                                                "field": "thread",
+                                                "optional": true,
+                                                "type": "int64"
+                                            },
+                                            {
+                                                "field": "db",
+                                                "optional": true,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "table",
+                                                "optional": true,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "query",
+                                                "optional": true,
+                                                "type": "string"
+                                            }
+                                        ],
+                                        "name": "io.debezium.connector.mysql.Source",
+                                        "optional": false,
+                                        "type": "struct"
+                                    },
+                                    {
+                                        "field": "op",
+                                        "optional": false,
+                                        "type": "string"
+                                    },
+                                    {
+                                        "field": "ts_ms",
+                                        "optional": true,
+                                        "type": "int64"
+                                    }
+                                ],
+                                "name": "dbserver1.inventory.addresses.Envelope",
+                                "optional": false,
+                                "type": "struct"
+                            }
+                        }
+                    },
+                    {
+                        "key": "{\"schema\":{\"type\":\"struct\",\"fields\":[{\"type\":\"int32\",\"optional\":false,\"field\":\"id\"}],\"optional\":false,\"name\":\"dbserver1.inventory.addresses.Key\"},\"payload\":{\"id\":305}}",
+                        "offset": 92,
+                        "partition": 0,
+                        "topic": "dbserver1.inventory.addresses",
+                        "value": {
+                            "payload": {
+                                "after": {
+                                    "city": "Winterthur",
+                                    "customer_id": 1001,
+                                    "id": 305,
+                                    "state": "Zurich",
+                                    "street": "Gertnerstrasse 4",
+                                    "type": "SHIPPING",
+                                    "zip": "8400"
+                                },
+                                "before": null,
+                                "op": "c",
+                                "source": {
+                                    "connector": "mysql",
+                                    "db": "inventory",
+                                    "file": "mysql-bin.000003",
+                                    "gtid": null,
+                                    "name": "dbserver1",
+                                    "pos": 29847,
+                                    "query": null,
+                                    "row": 0,
+                                    "server_id": 223344,
+                                    "snapshot": false,
+                                    "table": "addresses",
+                                    "thread": 102,
+                                    "ts_sec": 1557407590,
+                                    "version": "0.9.4.Final"
+                                },
+                                "ts_ms": 1557407590792
+                            },
+                            "schema": {
+                                "fields": [
+                                    {
+                                        "field": "before",
+                                        "fields": [
+                                            {
+                                                "field": "id",
+                                                "optional": false,
+                                                "type": "int32"
+                                            },
+                                            {
+                                                "field": "customer_id",
+                                                "optional": false,
+                                                "type": "int32"
+                                            },
+                                            {
+                                                "field": "street",
+                                                "optional": false,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "city",
+                                                "optional": false,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "state",
+                                                "optional": false,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "zip",
+                                                "optional": false,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "type",
+                                                "name": "io.debezium.data.Enum",
+                                                "optional": false,
+                                                "parameters": {
+                                                    "allowed": "SHIPPING,BILLING,LIVING"
+                                                },
+                                                "type": "string",
+                                                "version": 1
+                                            }
+                                        ],
+                                        "name": "dbserver1.inventory.addresses.Value",
+                                        "optional": true,
+                                        "type": "struct"
+                                    },
+                                    {
+                                        "field": "after",
+                                        "fields": [
+                                            {
+                                                "field": "id",
+                                                "optional": false,
+                                                "type": "int32"
+                                            },
+                                            {
+                                                "field": "customer_id",
+                                                "optional": false,
+                                                "type": "int32"
+                                            },
+                                            {
+                                                "field": "street",
+                                                "optional": false,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "city",
+                                                "optional": false,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "state",
+                                                "optional": false,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "zip",
+                                                "optional": false,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "type",
+                                                "name": "io.debezium.data.Enum",
+                                                "optional": false,
+                                                "parameters": {
+                                                    "allowed": "SHIPPING,BILLING,LIVING"
+                                                },
+                                                "type": "string",
+                                                "version": 1
+                                            }
+                                        ],
+                                        "name": "dbserver1.inventory.addresses.Value",
+                                        "optional": true,
+                                        "type": "struct"
+                                    },
+                                    {
+                                        "field": "source",
+                                        "fields": [
+                                            {
+                                                "field": "version",
+                                                "optional": true,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "connector",
+                                                "optional": true,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "name",
+                                                "optional": false,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "server_id",
+                                                "optional": false,
+                                                "type": "int64"
+                                            },
+                                            {
+                                                "field": "ts_sec",
+                                                "optional": false,
+                                                "type": "int64"
+                                            },
+                                            {
+                                                "field": "gtid",
+                                                "optional": true,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "file",
+                                                "optional": false,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "pos",
+                                                "optional": false,
+                                                "type": "int64"
+                                            },
+                                            {
+                                                "field": "row",
+                                                "optional": false,
+                                                "type": "int32"
+                                            },
+                                            {
+                                                "default": false,
+                                                "field": "snapshot",
+                                                "optional": true,
+                                                "type": "boolean"
+                                            },
+                                            {
+                                                "field": "thread",
+                                                "optional": true,
+                                                "type": "int64"
+                                            },
+                                            {
+                                                "field": "db",
+                                                "optional": true,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "table",
+                                                "optional": true,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "query",
+                                                "optional": true,
+                                                "type": "string"
+                                            }
+                                        ],
+                                        "name": "io.debezium.connector.mysql.Source",
+                                        "optional": false,
+                                        "type": "struct"
+                                    },
+                                    {
+                                        "field": "op",
+                                        "optional": false,
+                                        "type": "string"
+                                    },
+                                    {
+                                        "field": "ts_ms",
+                                        "optional": true,
+                                        "type": "int64"
+                                    }
+                                ],
+                                "name": "dbserver1.inventory.addresses.Envelope",
+                                "optional": false,
+                                "type": "struct"
+                            }
+                        }
+                    },
+                    {
+                        "key": "{\"schema\":{\"type\":\"struct\",\"fields\":[{\"type\":\"int32\",\"optional\":false,\"field\":\"id\"}],\"optional\":false,\"name\":\"dbserver1.inventory.addresses.Key\"},\"payload\":{\"id\":306}}",
+                        "offset": 93,
+                        "partition": 0,
+                        "topic": "dbserver1.inventory.addresses",
+                        "value": {
+                            "payload": {
+                                "after": {
+                                    "city": "Winterthur",
+                                    "customer_id": 1001,
+                                    "id": 306,
+                                    "state": "Zurich",
+                                    "street": "Gertnerstrasse 4",
+                                    "type": "SHIPPING",
+                                    "zip": "8400"
+                                },
+                                "before": null,
+                                "op": "c",
+                                "source": {
+                                    "connector": "mysql",
+                                    "db": "inventory",
+                                    "file": "mysql-bin.000003",
+                                    "gtid": null,
+                                    "name": "dbserver1",
+                                    "pos": 30178,
+                                    "query": null,
+                                    "row": 0,
+                                    "server_id": 223344,
+                                    "snapshot": false,
+                                    "table": "addresses",
+                                    "thread": 102,
+                                    "ts_sec": 1557407590,
+                                    "version": "0.9.4.Final"
+                                },
+                                "ts_ms": 1557407590806
+                            },
+                            "schema": {
+                                "fields": [
+                                    {
+                                        "field": "before",
+                                        "fields": [
+                                            {
+                                                "field": "id",
+                                                "optional": false,
+                                                "type": "int32"
+                                            },
+                                            {
+                                                "field": "customer_id",
+                                                "optional": false,
+                                                "type": "int32"
+                                            },
+                                            {
+                                                "field": "street",
+                                                "optional": false,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "city",
+                                                "optional": false,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "state",
+                                                "optional": false,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "zip",
+                                                "optional": false,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "type",
+                                                "name": "io.debezium.data.Enum",
+                                                "optional": false,
+                                                "parameters": {
+                                                    "allowed": "SHIPPING,BILLING,LIVING"
+                                                },
+                                                "type": "string",
+                                                "version": 1
+                                            }
+                                        ],
+                                        "name": "dbserver1.inventory.addresses.Value",
+                                        "optional": true,
+                                        "type": "struct"
+                                    },
+                                    {
+                                        "field": "after",
+                                        "fields": [
+                                            {
+                                                "field": "id",
+                                                "optional": false,
+                                                "type": "int32"
+                                            },
+                                            {
+                                                "field": "customer_id",
+                                                "optional": false,
+                                                "type": "int32"
+                                            },
+                                            {
+                                                "field": "street",
+                                                "optional": false,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "city",
+                                                "optional": false,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "state",
+                                                "optional": false,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "zip",
+                                                "optional": false,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "type",
+                                                "name": "io.debezium.data.Enum",
+                                                "optional": false,
+                                                "parameters": {
+                                                    "allowed": "SHIPPING,BILLING,LIVING"
+                                                },
+                                                "type": "string",
+                                                "version": 1
+                                            }
+                                        ],
+                                        "name": "dbserver1.inventory.addresses.Value",
+                                        "optional": true,
+                                        "type": "struct"
+                                    },
+                                    {
+                                        "field": "source",
+                                        "fields": [
+                                            {
+                                                "field": "version",
+                                                "optional": true,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "connector",
+                                                "optional": true,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "name",
+                                                "optional": false,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "server_id",
+                                                "optional": false,
+                                                "type": "int64"
+                                            },
+                                            {
+                                                "field": "ts_sec",
+                                                "optional": false,
+                                                "type": "int64"
+                                            },
+                                            {
+                                                "field": "gtid",
+                                                "optional": true,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "file",
+                                                "optional": false,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "pos",
+                                                "optional": false,
+                                                "type": "int64"
+                                            },
+                                            {
+                                                "field": "row",
+                                                "optional": false,
+                                                "type": "int32"
+                                            },
+                                            {
+                                                "default": false,
+                                                "field": "snapshot",
+                                                "optional": true,
+                                                "type": "boolean"
+                                            },
+                                            {
+                                                "field": "thread",
+                                                "optional": true,
+                                                "type": "int64"
+                                            },
+                                            {
+                                                "field": "db",
+                                                "optional": true,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "table",
+                                                "optional": true,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "query",
+                                                "optional": true,
+                                                "type": "string"
+                                            }
+                                        ],
+                                        "name": "io.debezium.connector.mysql.Source",
+                                        "optional": false,
+                                        "type": "struct"
+                                    },
+                                    {
+                                        "field": "op",
+                                        "optional": false,
+                                        "type": "string"
+                                    },
+                                    {
+                                        "field": "ts_ms",
+                                        "optional": true,
+                                        "type": "int64"
+                                    }
+                                ],
+                                "name": "dbserver1.inventory.addresses.Envelope",
+                                "optional": false,
+                                "type": "struct"
+                            }
+                        }
+                    },
+                    {
+                        "key": "{\"schema\":{\"type\":\"struct\",\"fields\":[{\"type\":\"int32\",\"optional\":false,\"field\":\"id\"}],\"optional\":false,\"name\":\"dbserver1.inventory.addresses.Key\"},\"payload\":{\"id\":307}}",
+                        "offset": 94,
+                        "partition": 0,
+                        "topic": "dbserver1.inventory.addresses",
+                        "value": {
+                            "payload": {
+                                "after": {
+                                    "city": "Winterthur",
+                                    "customer_id": 1001,
+                                    "id": 307,
+                                    "state": "Zurich",
+                                    "street": "Gertnerstrasse 4",
+                                    "type": "SHIPPING",
+                                    "zip": "8400"
+                                },
+                                "before": null,
+                                "op": "c",
+                                "source": {
+                                    "connector": "mysql",
+                                    "db": "inventory",
+                                    "file": "mysql-bin.000003",
+                                    "gtid": null,
+                                    "name": "dbserver1",
+                                    "pos": 30509,
+                                    "query": null,
+                                    "row": 0,
+                                    "server_id": 223344,
+                                    "snapshot": false,
+                                    "table": "addresses",
+                                    "thread": 102,
+                                    "ts_sec": 1557407590,
+                                    "version": "0.9.4.Final"
+                                },
+                                "ts_ms": 1557407590820
+                            },
+                            "schema": {
+                                "fields": [
+                                    {
+                                        "field": "before",
+                                        "fields": [
+                                            {
+                                                "field": "id",
+                                                "optional": false,
+                                                "type": "int32"
+                                            },
+                                            {
+                                                "field": "customer_id",
+                                                "optional": false,
+                                                "type": "int32"
+                                            },
+                                            {
+                                                "field": "street",
+                                                "optional": false,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "city",
+                                                "optional": false,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "state",
+                                                "optional": false,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "zip",
+                                                "optional": false,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "type",
+                                                "name": "io.debezium.data.Enum",
+                                                "optional": false,
+                                                "parameters": {
+                                                    "allowed": "SHIPPING,BILLING,LIVING"
+                                                },
+                                                "type": "string",
+                                                "version": 1
+                                            }
+                                        ],
+                                        "name": "dbserver1.inventory.addresses.Value",
+                                        "optional": true,
+                                        "type": "struct"
+                                    },
+                                    {
+                                        "field": "after",
+                                        "fields": [
+                                            {
+                                                "field": "id",
+                                                "optional": false,
+                                                "type": "int32"
+                                            },
+                                            {
+                                                "field": "customer_id",
+                                                "optional": false,
+                                                "type": "int32"
+                                            },
+                                            {
+                                                "field": "street",
+                                                "optional": false,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "city",
+                                                "optional": false,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "state",
+                                                "optional": false,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "zip",
+                                                "optional": false,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "type",
+                                                "name": "io.debezium.data.Enum",
+                                                "optional": false,
+                                                "parameters": {
+                                                    "allowed": "SHIPPING,BILLING,LIVING"
+                                                },
+                                                "type": "string",
+                                                "version": 1
+                                            }
+                                        ],
+                                        "name": "dbserver1.inventory.addresses.Value",
+                                        "optional": true,
+                                        "type": "struct"
+                                    },
+                                    {
+                                        "field": "source",
+                                        "fields": [
+                                            {
+                                                "field": "version",
+                                                "optional": true,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "connector",
+                                                "optional": true,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "name",
+                                                "optional": false,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "server_id",
+                                                "optional": false,
+                                                "type": "int64"
+                                            },
+                                            {
+                                                "field": "ts_sec",
+                                                "optional": false,
+                                                "type": "int64"
+                                            },
+                                            {
+                                                "field": "gtid",
+                                                "optional": true,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "file",
+                                                "optional": false,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "pos",
+                                                "optional": false,
+                                                "type": "int64"
+                                            },
+                                            {
+                                                "field": "row",
+                                                "optional": false,
+                                                "type": "int32"
+                                            },
+                                            {
+                                                "default": false,
+                                                "field": "snapshot",
+                                                "optional": true,
+                                                "type": "boolean"
+                                            },
+                                            {
+                                                "field": "thread",
+                                                "optional": true,
+                                                "type": "int64"
+                                            },
+                                            {
+                                                "field": "db",
+                                                "optional": true,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "table",
+                                                "optional": true,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "query",
+                                                "optional": true,
+                                                "type": "string"
+                                            }
+                                        ],
+                                        "name": "io.debezium.connector.mysql.Source",
+                                        "optional": false,
+                                        "type": "struct"
+                                    },
+                                    {
+                                        "field": "op",
+                                        "optional": false,
+                                        "type": "string"
+                                    },
+                                    {
+                                        "field": "ts_ms",
+                                        "optional": true,
+                                        "type": "int64"
+                                    }
+                                ],
+                                "name": "dbserver1.inventory.addresses.Envelope",
+                                "optional": false,
+                                "type": "struct"
+                            }
+                        }
+                    },
+                    {
+                        "key": "{\"schema\":{\"type\":\"struct\",\"fields\":[{\"type\":\"int32\",\"optional\":false,\"field\":\"id\"}],\"optional\":false,\"name\":\"dbserver1.inventory.addresses.Key\"},\"payload\":{\"id\":308}}",
+                        "offset": 95,
+                        "partition": 0,
+                        "topic": "dbserver1.inventory.addresses",
+                        "value": {
+                            "payload": {
+                                "after": {
+                                    "city": "Winterthur",
+                                    "customer_id": 1001,
+                                    "id": 308,
+                                    "state": "Zurich",
+                                    "street": "Gertnerstrasse 4",
+                                    "type": "SHIPPING",
+                                    "zip": "8400"
+                                },
+                                "before": null,
+                                "op": "c",
+                                "source": {
+                                    "connector": "mysql",
+                                    "db": "inventory",
+                                    "file": "mysql-bin.000003",
+                                    "gtid": null,
+                                    "name": "dbserver1",
+                                    "pos": 30840,
+                                    "query": null,
+                                    "row": 0,
+                                    "server_id": 223344,
+                                    "snapshot": false,
+                                    "table": "addresses",
+                                    "thread": 102,
+                                    "ts_sec": 1557407590,
+                                    "version": "0.9.4.Final"
+                                },
+                                "ts_ms": 1557407590857
+                            },
+                            "schema": {
+                                "fields": [
+                                    {
+                                        "field": "before",
+                                        "fields": [
+                                            {
+                                                "field": "id",
+                                                "optional": false,
+                                                "type": "int32"
+                                            },
+                                            {
+                                                "field": "customer_id",
+                                                "optional": false,
+                                                "type": "int32"
+                                            },
+                                            {
+                                                "field": "street",
+                                                "optional": false,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "city",
+                                                "optional": false,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "state",
+                                                "optional": false,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "zip",
+                                                "optional": false,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "type",
+                                                "name": "io.debezium.data.Enum",
+                                                "optional": false,
+                                                "parameters": {
+                                                    "allowed": "SHIPPING,BILLING,LIVING"
+                                                },
+                                                "type": "string",
+                                                "version": 1
+                                            }
+                                        ],
+                                        "name": "dbserver1.inventory.addresses.Value",
+                                        "optional": true,
+                                        "type": "struct"
+                                    },
+                                    {
+                                        "field": "after",
+                                        "fields": [
+                                            {
+                                                "field": "id",
+                                                "optional": false,
+                                                "type": "int32"
+                                            },
+                                            {
+                                                "field": "customer_id",
+                                                "optional": false,
+                                                "type": "int32"
+                                            },
+                                            {
+                                                "field": "street",
+                                                "optional": false,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "city",
+                                                "optional": false,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "state",
+                                                "optional": false,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "zip",
+                                                "optional": false,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "type",
+                                                "name": "io.debezium.data.Enum",
+                                                "optional": false,
+                                                "parameters": {
+                                                    "allowed": "SHIPPING,BILLING,LIVING"
+                                                },
+                                                "type": "string",
+                                                "version": 1
+                                            }
+                                        ],
+                                        "name": "dbserver1.inventory.addresses.Value",
+                                        "optional": true,
+                                        "type": "struct"
+                                    },
+                                    {
+                                        "field": "source",
+                                        "fields": [
+                                            {
+                                                "field": "version",
+                                                "optional": true,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "connector",
+                                                "optional": true,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "name",
+                                                "optional": false,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "server_id",
+                                                "optional": false,
+                                                "type": "int64"
+                                            },
+                                            {
+                                                "field": "ts_sec",
+                                                "optional": false,
+                                                "type": "int64"
+                                            },
+                                            {
+                                                "field": "gtid",
+                                                "optional": true,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "file",
+                                                "optional": false,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "pos",
+                                                "optional": false,
+                                                "type": "int64"
+                                            },
+                                            {
+                                                "field": "row",
+                                                "optional": false,
+                                                "type": "int32"
+                                            },
+                                            {
+                                                "default": false,
+                                                "field": "snapshot",
+                                                "optional": true,
+                                                "type": "boolean"
+                                            },
+                                            {
+                                                "field": "thread",
+                                                "optional": true,
+                                                "type": "int64"
+                                            },
+                                            {
+                                                "field": "db",
+                                                "optional": true,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "table",
+                                                "optional": true,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "query",
+                                                "optional": true,
+                                                "type": "string"
+                                            }
+                                        ],
+                                        "name": "io.debezium.connector.mysql.Source",
+                                        "optional": false,
+                                        "type": "struct"
+                                    },
+                                    {
+                                        "field": "op",
+                                        "optional": false,
+                                        "type": "string"
+                                    },
+                                    {
+                                        "field": "ts_ms",
+                                        "optional": true,
+                                        "type": "int64"
+                                    }
+                                ],
+                                "name": "dbserver1.inventory.addresses.Envelope",
+                                "optional": false,
+                                "type": "struct"
+                            }
+                        }
+                    },
+                    {
+                        "key": "{\"schema\":{\"type\":\"struct\",\"fields\":[{\"type\":\"int32\",\"optional\":false,\"field\":\"id\"}],\"optional\":false,\"name\":\"dbserver1.inventory.addresses.Key\"},\"payload\":{\"id\":309}}",
+                        "offset": 96,
+                        "partition": 0,
+                        "topic": "dbserver1.inventory.addresses",
+                        "value": {
+                            "payload": {
+                                "after": {
+                                    "city": "Winterthur",
+                                    "customer_id": 1001,
+                                    "id": 309,
+                                    "state": "Zurich",
+                                    "street": "Gertnerstrasse 4",
+                                    "type": "SHIPPING",
+                                    "zip": "8400"
+                                },
+                                "before": null,
+                                "op": "c",
+                                "source": {
+                                    "connector": "mysql",
+                                    "db": "inventory",
+                                    "file": "mysql-bin.000003",
+                                    "gtid": null,
+                                    "name": "dbserver1",
+                                    "pos": 31171,
+                                    "query": null,
+                                    "row": 0,
+                                    "server_id": 223344,
+                                    "snapshot": false,
+                                    "table": "addresses",
+                                    "thread": 102,
+                                    "ts_sec": 1557407590,
+                                    "version": "0.9.4.Final"
+                                },
+                                "ts_ms": 1557407590877
+                            },
+                            "schema": {
+                                "fields": [
+                                    {
+                                        "field": "before",
+                                        "fields": [
+                                            {
+                                                "field": "id",
+                                                "optional": false,
+                                                "type": "int32"
+                                            },
+                                            {
+                                                "field": "customer_id",
+                                                "optional": false,
+                                                "type": "int32"
+                                            },
+                                            {
+                                                "field": "street",
+                                                "optional": false,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "city",
+                                                "optional": false,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "state",
+                                                "optional": false,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "zip",
+                                                "optional": false,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "type",
+                                                "name": "io.debezium.data.Enum",
+                                                "optional": false,
+                                                "parameters": {
+                                                    "allowed": "SHIPPING,BILLING,LIVING"
+                                                },
+                                                "type": "string",
+                                                "version": 1
+                                            }
+                                        ],
+                                        "name": "dbserver1.inventory.addresses.Value",
+                                        "optional": true,
+                                        "type": "struct"
+                                    },
+                                    {
+                                        "field": "after",
+                                        "fields": [
+                                            {
+                                                "field": "id",
+                                                "optional": false,
+                                                "type": "int32"
+                                            },
+                                            {
+                                                "field": "customer_id",
+                                                "optional": false,
+                                                "type": "int32"
+                                            },
+                                            {
+                                                "field": "street",
+                                                "optional": false,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "city",
+                                                "optional": false,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "state",
+                                                "optional": false,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "zip",
+                                                "optional": false,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "type",
+                                                "name": "io.debezium.data.Enum",
+                                                "optional": false,
+                                                "parameters": {
+                                                    "allowed": "SHIPPING,BILLING,LIVING"
+                                                },
+                                                "type": "string",
+                                                "version": 1
+                                            }
+                                        ],
+                                        "name": "dbserver1.inventory.addresses.Value",
+                                        "optional": true,
+                                        "type": "struct"
+                                    },
+                                    {
+                                        "field": "source",
+                                        "fields": [
+                                            {
+                                                "field": "version",
+                                                "optional": true,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "connector",
+                                                "optional": true,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "name",
+                                                "optional": false,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "server_id",
+                                                "optional": false,
+                                                "type": "int64"
+                                            },
+                                            {
+                                                "field": "ts_sec",
+                                                "optional": false,
+                                                "type": "int64"
+                                            },
+                                            {
+                                                "field": "gtid",
+                                                "optional": true,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "file",
+                                                "optional": false,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "pos",
+                                                "optional": false,
+                                                "type": "int64"
+                                            },
+                                            {
+                                                "field": "row",
+                                                "optional": false,
+                                                "type": "int32"
+                                            },
+                                            {
+                                                "default": false,
+                                                "field": "snapshot",
+                                                "optional": true,
+                                                "type": "boolean"
+                                            },
+                                            {
+                                                "field": "thread",
+                                                "optional": true,
+                                                "type": "int64"
+                                            },
+                                            {
+                                                "field": "db",
+                                                "optional": true,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "table",
+                                                "optional": true,
+                                                "type": "string"
+                                            },
+                                            {
+                                                "field": "query",
+                                                "optional": true,
+                                                "type": "string"
+                                            }
+                                        ],
+                                        "name": "io.debezium.connector.mysql.Source",
+                                        "optional": false,
+                                        "type": "struct"
+                                    },
+                                    {
+                                        "field": "op",
+                                        "optional": false,
+                                        "type": "string"
+                                    },
+                                    {
+                                        "field": "ts_ms",
+                                        "optional": true,
+                                        "type": "int64"
+                                    }
+                                ],
+                                "name": "dbserver1.inventory.addresses.Envelope",
+                                "optional": false,
+                                "type": "struct"
+                            }
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "logs": [
+        "2019-05-09T13:13:11.233296397Z stdout: { messages:",
+        "2019-05-09T13:13:11.233339118Z stdout: [ { key: '{\"schema\":{\"type\":\"struct\",\"fields\":[{\"type\":\"int32\",\"optional\":false,\"field\":\"id\"}],\"optional\":false,\"name\":\"dbserver1.inventory.addresses.Key\"},\"payload\":{\"id\":300}}',",
+        "2019-05-09T13:13:11.233347318Z stdout: offset: 87,",
+        "2019-05-09T13:13:11.233350993Z stdout: partition: 0,",
+        "2019-05-09T13:13:11.233354474Z stdout: topic: 'dbserver1.inventory.addresses',",
+        "2019-05-09T13:13:11.23335805Z  stdout: value: [Object] },",
+        "2019-05-09T13:13:11.233361856Z stdout: { key: '{\"schema\":{\"type\":\"struct\",\"fields\":[{\"type\":\"int32\",\"optional\":false,\"field\":\"id\"}],\"optional\":false,\"name\":\"dbserver1.inventory.addresses.Key\"},\"payload\":{\"id\":301}}',",
+        "2019-05-09T13:13:11.233366936Z stdout: offset: 88,",
+        "2019-05-09T13:13:11.23337029Z  stdout: partition: 0,",
+        "2019-05-09T13:13:11.233373824Z stdout: topic: 'dbserver1.inventory.addresses',",
+        "2019-05-09T13:13:11.233377236Z stdout: value: [Object] },",
+        "2019-05-09T13:13:11.233380651Z stdout: { key: '{\"schema\":{\"type\":\"struct\",\"fields\":[{\"type\":\"int32\",\"optional\":false,\"field\":\"id\"}],\"optional\":false,\"name\":\"dbserver1.inventory.addresses.Key\"},\"payload\":{\"id\":302}}',",
+        "2019-05-09T13:13:11.233385287Z stdout: offset: 89,",
+        "2019-05-09T13:13:11.233388706Z stdout: partition: 0,",
+        "2019-05-09T13:13:11.233392121Z stdout: topic: 'dbserver1.inventory.addresses',",
+        "2019-05-09T13:13:11.233395644Z stdout: value: [Object] },",
+        "2019-05-09T13:13:11.233399112Z stdout: { key: '{\"schema\":{\"type\":\"struct\",\"fields\":[{\"type\":\"int32\",\"optional\":false,\"field\":\"id\"}],\"optional\":false,\"name\":\"dbserver1.inventory.addresses.Key\"},\"payload\":{\"id\":303}}',",
+        "2019-05-09T13:13:11.233403515Z stdout: offset: 90,",
+        "2019-05-09T13:13:11.233406839Z stdout: partition: 0,",
+        "2019-05-09T13:13:11.233410193Z stdout: topic: 'dbserver1.inventory.addresses',",
+        "2019-05-09T13:13:11.233413596Z stdout: value: [Object] },",
+        "2019-05-09T13:13:11.233416944Z stdout: { key: '{\"schema\":{\"type\":\"struct\",\"fields\":[{\"type\":\"int32\",\"optional\":false,\"field\":\"id\"}],\"optional\":false,\"name\":\"dbserver1.inventory.addresses.Key\"},\"payload\":{\"id\":304}}',",
+        "2019-05-09T13:13:11.233421242Z stdout: offset: 91,",
+        "2019-05-09T13:13:11.233424691Z stdout: partition: 0,",
+        "2019-05-09T13:13:11.233429606Z stdout: topic: 'dbserver1.inventory.addresses',",
+        "2019-05-09T13:13:11.233433078Z stdout: value: [Object] },",
+        "2019-05-09T13:13:11.233436522Z stdout: { key: '{\"schema\":{\"type\":\"struct\",\"fields\":[{\"type\":\"int32\",\"optional\":false,\"field\":\"id\"}],\"optional\":false,\"name\":\"dbserver1.inventory.addresses.Key\"},\"payload\":{\"id\":305}}',",
+        "2019-05-09T13:13:11.233440755Z stdout: offset: 92,",
+        "2019-05-09T13:13:11.233444101Z stdout: partition: 0,",
+        "2019-05-09T13:13:11.233447448Z stdout: topic: 'dbserver1.inventory.addresses',",
+        "2019-05-09T13:13:11.233450845Z stdout: value: [Object] },",
+        "2019-05-09T13:13:11.233459556Z stdout: { key: '{\"schema\":{\"type\":\"struct\",\"fields\":[{\"type\":\"int32\",\"optional\":false,\"field\":\"id\"}],\"optional\":false,\"name\":\"dbserver1.inventory.addresses.Key\"},\"payload\":{\"id\":306}}',",
+        "2019-05-09T13:13:11.23346401Z  stdout: offset: 93,",
+        "2019-05-09T13:13:11.233467487Z stdout: partition: 0,",
+        "2019-05-09T13:13:11.233471921Z stdout: topic: 'dbserver1.inventory.addresses',",
+        "2019-05-09T13:13:11.233475422Z stdout: value: [Object] },",
+        "2019-05-09T13:13:11.233478834Z stdout: { key: '{\"schema\":{\"type\":\"struct\",\"fields\":[{\"type\":\"int32\",\"optional\":false,\"field\":\"id\"}],\"optional\":false,\"name\":\"dbserver1.inventory.addresses.Key\"},\"payload\":{\"id\":307}}',",
+        "2019-05-09T13:13:11.233483204Z stdout: offset: 94,",
+        "2019-05-09T13:13:11.233486559Z stdout: partition: 0,",
+        "2019-05-09T13:13:11.233489942Z stdout: topic: 'dbserver1.inventory.addresses',",
+        "2019-05-09T13:13:11.233493374Z stdout: value: [Object] },",
+        "2019-05-09T13:13:11.233496742Z stdout: { key: '{\"schema\":{\"type\":\"struct\",\"fields\":[{\"type\":\"int32\",\"optional\":false,\"field\":\"id\"}],\"optional\":false,\"name\":\"dbserver1.inventory.addresses.Key\"},\"payload\":{\"id\":308}}',",
+        "2019-05-09T13:13:11.233501142Z stdout: offset: 95,",
+        "2019-05-09T13:13:11.233504474Z stdout: partition: 0,",
+        "2019-05-09T13:13:11.233507842Z stdout: topic: 'dbserver1.inventory.addresses',",
+        "2019-05-09T13:13:11.233511223Z stdout: value: [Object] },",
+        "2019-05-09T13:13:11.233514591Z stdout: { key: '{\"schema\":{\"type\":\"struct\",\"fields\":[{\"type\":\"int32\",\"optional\":false,\"field\":\"id\"}],\"optional\":false,\"name\":\"dbserver1.inventory.addresses.Key\"},\"payload\":{\"id\":309}}',",
+        "2019-05-09T13:13:11.233518842Z stdout: offset: 96,",
+        "2019-05-09T13:13:11.233522212Z stdout: partition: 0,",
+        "2019-05-09T13:13:11.233559233Z stdout: topic: 'dbserver1.inventory.addresses',",
+        "2019-05-09T13:13:11.233563083Z stdout: value: [Object] } ] }"
+    ],
+    "annotations": [
+        {
+            "key": "path",
+            "value": "guest/kafkaOutAction"
+        },
+        {
+            "key": "waitTime",
+            "value": 38
+        },
+        {
+            "key": "kind",
+            "value": "nodejs:6"
+        },
+        {
+            "key": "timeout",
+            "value": false
+        },
+        {
+            "key": "limits",
+            "value": {
+                "concurrency": 1,
+                "logs": 10,
+                "memory": 256,
+                "timeout": 60000
+            }
+        },
+        {
+            "key": "initTime",
+            "value": 37
+        }
+    ],
+    "publish": false
+}
